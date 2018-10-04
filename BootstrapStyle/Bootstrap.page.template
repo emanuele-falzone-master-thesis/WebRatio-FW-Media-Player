@@ -80,6 +80,9 @@ def showPageTitle = params["show-page-title"] == "true"
 						html5: true
 					});
 					h.play();
+					h.on('end', function() {
+						$('#ln7')[0].click();
+					});
 				}
 			});
 		</script>
@@ -90,131 +93,8 @@ def showPageTitle = params["show-page-title"] == "true"
 [% if (params["navbar-type"] == "standard") {%]
 <div class="container[%= (pageFluid) ? "-fluid" : "" %]">
 [% } %]
-	<nav class="navbar[%= navbarStyle %][%= navbarType %]" role="navigation">
-		[% if (params["navbar-type"] != "standard") {%]
-		<div class="container[%= (pageFluid) ? "-fluid" : "" %]">
-		[% } %]
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="[% if (homePage) {%]<wr:Id context="homePage"/>.do[% } else {%]index.jsp[% } %]">[%= StringEscapeUtils.escapeHtml(params["application-name"]) %]</a>
-			</div>
-			<div class="navbar-collapse collapse">		      
-	            <ul class="nav navbar-nav" role="menu">
-					<wr:LandmarkMenu level="1" var="lm">
-					<wr:Visible>
-						[% if (!secondLevelLeft && getLandmarkChildren(lm).size() > 0) { %]
-							<wr:Current>
-								<li class="active dropdown">
-							</wr:Current>
-							<wr:NonCurrent>
-								<li class="dropdown">
-							</wr:NonCurrent>
-									<a href="<wr:URL/>" class="dropdown-toggle" data-toggle="dropdown" data-target="#"><wr:Label context="lm"/><span class="caret"></span></a>
-									<ul class="dropdown-menu" role="menu">
-										<wr:Current>
-											<wr:LandmarkMenu level="2" var="lm2">
-											<wr:Visible>
-												<wr:Current>
-												[% if (getLandmarkChildren(lm2).size() > 0) { %]													
-													<li class="dropdown dropdown-submenu">
-												        <a href="<wr:URL context="lm2"/>" class="dropdown-toggle" data-toggle="dropdown" data-target="#"><wr:Label context="lm2"/></a>
-												        <ul class="dropdown-menu" role="menu">
-												        	<wr:LandmarkMenu level="3" var="lm3">
-												        	<wr:Visible>
-												        		<li><wr:Link/></li>
-												        	</wr:Visible>
-												        	</wr:LandmarkMenu>
-												        </ul>
-												      </li>
-												[% } else { %]
-													<li><wr:Link/></li>
-												[% } %]
-												</wr:Current>
-												<wr:NonCurrent>
-												[% if (getLandmarkChildren(lm2).size() > 0) { %]													
-													<li class="dropdown dropdown-submenu">
-												        <a href="<wr:URL context="lm2"/>" class="dropdown-toggle" data-toggle="dropdown" data-target="#"><wr:Label context="lm2"/></a>
-												        <ul class="dropdown-menu" role="menu">
-												        	<wr:LandmarkMenu level="3" var="lm3">
-												        	<wr:Visible>
-												        		<li><wr:Link/></li>
-												        	</wr:Visible>
-												        	</wr:LandmarkMenu>
-												        </ul>
-												      </li>
-												[% } else { %]
-													<li><wr:Link/></li>
-												[% } %]
-												</wr:NonCurrent>
-											</wr:Visible>
-											</wr:LandmarkMenu>
-										</wr:Current>
-										<wr:NonCurrent>
-											<wr:LandmarkMenu level="2" var="lm2">
-											<wr:Visible>
-												<wr:NonCurrent>
-												  	[% if (getLandmarkChildren(lm2).size() > 0) { %]													
-														<li class="dropdown dropdown-submenu">
-													        <a href="<wr:URL context="lm2"/>" class="dropdown-toggle" data-toggle="dropdown" data-target="#"><wr:Label context="lm2"/></a>
-													        <ul class="dropdown-menu" role="menu">
-													        	<wr:LandmarkMenu level="3" var="lm3">
-													        		<wr:Visible>
-														        		<li><wr:Link/></li>
-														        	</wr:Visible>
-													        	</wr:LandmarkMenu>
-													        </ul>
-													      </li>
-													[% } else { %]
-														<li><wr:Link/></li>
-													[% } %]	
-												</wr:NonCurrent>
-											</wr:Visible>																			
-											</wr:LandmarkMenu>
-										</wr:NonCurrent>
-									</ul>
-								</li>
-						[% } else { %]
-							<wr:Current>
-								<li class="active"><a href="<wr:URL/>"><wr:Label/></a></li>
-							</wr:Current>
-							<wr:NonCurrent>
-								<li><a href="<wr:URL/>"><wr:Label/></a></li>
-							</wr:NonCurrent>
-						[% } %]
-					</wr:Visible>
-					</wr:LandmarkMenu>
-	            </ul>
-	            <div class="nav navbar-right user-location">
-	            	<wr:CustomLocation name="User"/>
-	            </div>
-			</div>
-		</div>
-	</nav>
 <div class="container[%= (pageFluid) ? "-fluid" : "" %][%= (params["navbar-type"] == "fixed-top") ? " container-fixed-top-padding" : " container-top-padding"%]">
-	[% if (showBreadcrumb) { %]
-	<ol class="breadcrumb" aria-label="breadcrumbs">
-		<wr:NavigationBar>
-		 <li><wr:Link class="small"/></li>
-		</wr:NavigationBar>
-		<li class="active"><wr:Label context="page"/></li>
-	</ol>
-	[% } %]
 	[% if (showPageTitle || page.selectSingleNode("layout:CustomLocation[@name='Page Links']") != null) { %]
-	<div class="page-header clearfix">
-		[% if (page.selectSingleNode("layout:CustomLocation[@name='Page Links']") != null) { %]
-  		<div class="pull-right page-links">
-  			<wr:CustomLocation name="Page Links"/>
-		</div>
-		[% } %]
-		[% if (showPageTitle) { %]
-			<h1><wr:Label context="page"/></h1>
-		[% } %]
-	</div>
 	[% } %]
 	<div class="row">
 		[% if (showLeftColumn || secondLevelLeft) { %]
@@ -294,10 +174,6 @@ def showPageTitle = params["show-page-title"] == "true"
 		</div>
 		[% } %]
 	</div>
-	<hr class="footer-bar"/>
-	<footer class="copy-footer" role="contentinfo">
-		<p class="text-center">Generated by <a href="http://www.webratio.com" target="_blank" title="High Productivity Web and Mobile App Dev Platform">WebRatio<sup>&reg;</sup></a></p>
-	</footer>
 </div>
 </wr:PageForm>
 </body>

@@ -81,7 +81,20 @@ def link = unitLink?.valueOf("@link")
 				[% } %]
 				<tbody>
 				<c:forEach var="current" varStatus="status" items="${<wr:Id context="unit"/>.data}">
-					<c:set var="index" value="${status.index}"/>	
+					<c:set var="index" value="${status.index}"/>
+						[% if (linkPosition == "on_row") { %]
+						<tr<c:if test="${<wr:Id context="unit"/>.currentIndex eq index}"> class="info"</c:if> onclick="window.location='<wr:URL context="unitLink"/>'">	
+						
+							<wr:Iterate var="attr" context="unit" select="layout:Attribute">
+								<wr:Visible>
+								<td class="<wr:StyleClass/> [%=attr["type"]%]">
+									<wr:Value/>
+								</td>
+							    </wr:Visible>
+							</wr:Iterate>
+					
+						</tr>
+						[% } else { %]
 						<tr<c:if test="${<wr:Id context="unit"/>.currentIndex eq index}"> class="info"</c:if>>	
 					     [% if (linkPosition == "left") { %]
 								<wr:Iterate var="l" context="unit" select="layout:Link[string(@_exp) != 't']">
@@ -127,6 +140,7 @@ def link = unitLink?.valueOf("@link")
 								</wr:Visible>
 							</wr:Iterate>
 						</tr>
+						[% } %]
 					</c:forEach>
 					</tbody>
 				</table>
