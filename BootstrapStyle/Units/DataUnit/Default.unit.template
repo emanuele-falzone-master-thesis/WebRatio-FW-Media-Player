@@ -38,7 +38,7 @@ def emptyUnitMessage = params["empty-unit-message"]
 			<wr:Iterate var="attr" context="unit" select="layout:Attribute">
 			<wr:Visible>
 			[% if (labelPosition == "left") { %]<div class="row">[% } %]
-				[% if (labelPosition != "none") { %]<label class="header[%= (labelPosition == "left") ? (" col-md-" + labelWidth) : "" %]"><wr:Label/></label>[% } %]
+				[% if (labelPosition != "none" && index == 0) { %]<label class="header[%= (labelPosition == "left") ? (" col-md-" + labelWidth) : "" %]"><wr:Label/></label>[% } %]
 				<div class="value[%= (labelPosition == "left") ? (" col-md-" + (12-labelWidth)) : "" %]"><wr:Value/></div>
 			[% if (labelPosition == "left") { %]</div>[% } %]
 			</wr:Visible>

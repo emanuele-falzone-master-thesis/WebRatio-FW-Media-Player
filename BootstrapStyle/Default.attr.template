@@ -90,7 +90,9 @@ if (mode == "value") { %]
 [% if (mode == "label") { %]
 	<label class="<wr:StyleClass context="attr"/> header"><wr:Label context="attr"/></label>
 [% } else if ((type == "string") || (type == "text")) { 
-    if (isBpmLocalizedModel() && isBpmLocalizedAttribute(attr)) { %]
+	if (attrProp == 'image') {	%]
+	<img width="300px" src="http://emanuele.falzone.gitlab.io/almostjs-demo-game-data/images/<c:out value="${[%=item%].[%=attrProp%]}"/>">
+  [% } else if (isBpmLocalizedModel() && isBpmLocalizedAttribute(attr)) { %] 
 	<bean:message key="${[%=item%].[%=attrProp%]}"/>
   [% } else if (contentType == "text/html"){%]
   	<c:out value="${[%=item%].[%=attrProp%]}" escapeXml="false"/>
