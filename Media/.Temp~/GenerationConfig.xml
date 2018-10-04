@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration>
+  <Properties>
+    <Property name="ajaxActivated">true</Property>
+    <Property name="applicationServer">Tomcat</Property>
+    <Property name="cloudDeploy">false</Property>
+    <Property name="commonsLibDir">/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.commons.libs_7.2.16.201709280414/lib</Property>
+    <Property name="dbConfigPath">/var/folders/tx/w1yh42kn1ns0kr3vr8lkvyd40000gn/T/WRDBConfig7563691916291353052.xml</Property>
+    <Property name="defaultEncoding"></Property>
+    <Property name="deployCorePluginDir">/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/configuration/org.eclipse.osgi/bundles/49/1/.cp</Property>
+    <Property name="derbySystemHome">/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/WebRatio.app/Contents/MacOS/workspace/.metadata/.plugins/com.webratio.commons.db/derby</Property>
+    <Property name="enterpriseProjectDir"></Property>
+    <Property name="eventSocketPort">55642</Property>
+    <Property name="excludedProjects" type="list"></Property>
+    <Property name="generationTime">201810040933</Property>
+    <Property name="helpersPluginDir">/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.generator.helpers_7.2.16.201709280414</Property>
+    <Property name="i18nBundleKeysFile" type="file"></Property>
+    <Property name="i18nExtraBundleFile" type="file"></Property>
+    <Property name="localDeploy">true</Property>
+    <Property name="lockDir">/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/WebRatio.app/Contents/MacOS/workspace/Media/.Temp~</Property>
+    <Property name="normalizeDescriptors">false</Property>
+    <Property name="outputPath">/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/Tomcat/webapps/Media</Property>
+    <Property name="phases">All</Property>
+    <Property name="projectDir">/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/WebRatio.app/Contents/MacOS/workspace/Media</Property>
+    <Property name="projectName">Media</Property>
+    <Property name="projectPath">/var/folders/tx/w1yh42kn1ns0kr3vr8lkvyd40000gn/T/Project1598177481153531882.wr</Property>
+    <Property name="projectType">WEBPROJECT</Property>
+    <Property name="rootModuleName"></Property>
+    <Property name="uiPluginDir">/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.ide.ui_7.2.16.201709280414</Property>
+    <Property name="webappPluginDir">/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.generator.webapp_7.2.16.201709280414</Property>
+    <Property name="wrBuildId">201709280414</Property>
+    <Property name="wrGenerateOldValidationRules">false</Property>
+    <Property name="wrModelStatistics">pages=1|units=10</Property>
+    <Property name="wrVersion">7.2.16</Property>
+  </Properties>
+  <Plugins>
+    <Plugin id="com.webratio.commons.libs" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.commons.libs_7.2.16.201709280414"/>
+    <Plugin id="com.webratio.commons.transform" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.commons.transform_7.2.16.201709280414"/>
+    <Plugin id="com.webratio.debug" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.debug_7.2.16.201709280414"/>
+    <Plugin id="com.webratio.json" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.json_7.2.16.201709280414"/>
+    <Plugin id="com.webratio.lib.apache.commons.codec" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.lib.apache.commons.codec_7.2.16.201709280414"/>
+    <Plugin id="com.webratio.lib.apache.commons.collections" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.lib.apache.commons.collections_7.2.16.201709280414"/>
+    <Plugin id="com.webratio.lib.apache.commons.httpclient" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.lib.apache.commons.httpclient_7.2.16.201709280414"/>
+    <Plugin id="com.webratio.lib.apache.commons.lang" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.lib.apache.commons.lang_7.2.16.201709280414"/>
+    <Plugin id="com.webratio.lib.apache.commons.logging" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.lib.apache.commons.logging_7.2.16.201709280414"/>
+    <Plugin id="com.webratio.lib.dom4j" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.lib.dom4j_7.2.16.201709280414"/>
+    <Plugin id="com.webratio.lib.javassist" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.lib.javassist_7.2.16.201709280414"/>
+    <Plugin id="com.webratio.rtx.extras" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.rtx.extras_7.2.16.201709280414"/>
+    <Plugin id="com.webratio.rtx" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.rtx_7.2.16.201709280414"/>
+    <Plugin id="com.webratio.struts13" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.struts13_7.2.16.201709280414"/>
+    <Plugin id="com.webratio.units.content" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.units.content_7.2.16.201709280414" type="components"/>
+    <Plugin id="com.webratio.units.controlflow" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.units.controlflow_7.2.16.201709280414" type="components"/>
+    <Plugin id="com.webratio.units.module" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.units.module_7.2.16.201709280414" type="components"/>
+    <Plugin id="com.webratio.units.operation" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.units.operation_7.2.16.201709280414" type="components"/>
+    <Plugin id="com.webratio.units.session" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.units.session_7.2.16.201709280414" type="components"/>
+    <Plugin id="com.webratio.units.utility" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.units.utility_7.2.16.201709280414" type="components"/>
+    <Plugin id="com.webratio.units.validation" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.units.validation_7.2.16.201709280414" type="components"/>
+    <Plugin id="com.webratio.units.ws" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.units.ws_7.2.16.201709280414" type="components"/>
+    <Plugin id="com.webratio.ws" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.ws_7.2.16.201709280414"/>
+    <Plugin id="com.webratio.xsd" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.xsd_7.2.16.201709280414"/>
+  </Plugins>
+  <Styles>
+    <Style name="BootstrapStyle" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/WebRatio.app/Contents/MacOS/workspace/BootstrapStyle"/>
+    <Style name="Excel" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/Excel_7.2.16.201709280414"/>
+    <Style name="Reports" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/Reports_7.2.16.201709280414"/>
+    <Style name="WRDefault" path="/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/WRDefault_7.2.16.201709280414"/>
+  </Styles>
+  <FileEncodings/>
+</Configuration>

@@ -1,0 +1,11 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1" name="MainSiteView" homePage="sv1#scu1" layout:style="BootstrapStyle">
+  <OperationUnits>
+    <ScriptUnit id="sv1#scu1" name="onstart" gr:x="635" gr:y="20">
+      <OKLink id="sv1#scu1#oln17" name="OKFlow5" to="sv1#miu5" automaticCoupling="true"/>
+      <KOLink id="sv1#scu1#kln2" name="KOFlow1" to="sv1#miu5" automaticCoupling="true" gr:bendpoints="2,52,-33,-48"/>
+    </ScriptUnit>
+    <ModuleInstanceUnit id="sv1#miu5" gr:x="590" gr:y="150" action="true" moduleId="mov1#mpkg2#opm1">
+      <OKLink id="sv1#miu5#oln18" name="OKFlow18" to="sv1#page2" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</SiteView>

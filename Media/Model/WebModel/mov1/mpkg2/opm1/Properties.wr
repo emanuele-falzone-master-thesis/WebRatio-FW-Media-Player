@@ -1,0 +1,33 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#mpkg2#opm1" name="load" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#mpkg2#opm1#icu1" gr:x="30" gr:y="60">
+      <OKLink id="mov1#mpkg2#opm1#icu1#oln1" name="OKFlow2" to="mov1#mpkg2#opm1#dlu1" automaticCoupling="true"/>
+    </InputCollectorUnit>
+    <RestfulRequestResponseUnit id="mov1#mpkg2#opm1#rfrr1" name="Restful Request Response" gr:x="505" gr:y="75" requestMethod="DELETE" requestContentType="JSON" responseContentType="JSON" compressRequest="false" endpointURL="http://emanuele.falzone.gitlab.io/almostjs-demo-game-data/songs.json">
+      <ResponseBodyParameter id="mov1#mpkg2#opm1#rfrr1#rrsp1" name="ResponseBodyParameter" minCard="1" maxCard="1">
+        <SimpleParameterFragment id="mov1#mpkg2#opm1#rfrr1#rrsp1#spf1" name="author_name" minCard="1" maxCard="1"/>
+        <SimpleParameterFragment id="mov1#mpkg2#opm1#rfrr1#rrsp1#spf2" name="title" minCard="1" maxCard="1"/>
+        <SimpleParameterFragment id="mov1#mpkg2#opm1#rfrr1#rrsp1#spf3" name="author" minCard="1" maxCard="1"/>
+        <SimpleParameterFragment id="mov1#mpkg2#opm1#rfrr1#rrsp1#spf4" name="genre" minCard="1" maxCard="1"/>
+        <SimpleParameterFragment id="mov1#mpkg2#opm1#rfrr1#rrsp1#spf5" name="image" minCard="1" maxCard="1"/>
+        <SimpleParameterFragment id="mov1#mpkg2#opm1#rfrr1#rrsp1#spf6" name="sound" minCard="1" maxCard="1"/>
+      </ResponseBodyParameter>
+      <OKLink id="mov1#mpkg2#opm1#rfrr1#oln2" name="OKFlow1" to="mov1#mpkg2#opm1#cru1">
+        <LinkParameter id="mov1#mpkg2#opm1#rfrr1#oln2#par25" name="ResponseBodyParameter - ResponseBodyParameter/author_name_Author" source="ResponseBodyParameter$author_name" target="mov1#mpkg2#opm1#cru1.ent4#att5"/>
+        <LinkParameter id="mov1#mpkg2#opm1#rfrr1#oln2#par26" name="ResponseBodyParameter - ResponseBodyParameter/sound_sound" source="ResponseBodyParameter$sound" target="mov1#mpkg2#opm1#cru1.ent4#att9"/>
+        <LinkParameter id="mov1#mpkg2#opm1#rfrr1#oln2#par27" name="ResponseBodyParameter - ResponseBodyParameter/title_Title" source="ResponseBodyParameter$title" target="mov1#mpkg2#opm1#cru1.ent4#att6"/>
+        <LinkParameter id="mov1#mpkg2#opm1#rfrr1#oln2#par7" name="ResponseBodyParameter - ResponseBodyParameter/image_image" source="ResponseBodyParameter$image" target="mov1#mpkg2#opm1#cru1.ent4#att3"/>
+      </OKLink>
+    </RestfulRequestResponseUnit>
+    <CreateUnit id="mov1#mpkg2#opm1#cru1" name="Create Songs" gr:x="760" gr:y="85" bulk="true" entity="ent4">
+      <OKLink id="mov1#mpkg2#opm1#cru1#oln3" name="OKFlow3" to="mov1#mpkg2#opm1#okcu1" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit id="mov1#mpkg2#opm1#okcu1" name="OK Port1" gr:x="905" gr:y="95"/>
+    <DeleteUnit id="mov1#mpkg2#opm1#dlu1" name="Delete Songs" gr:x="350" gr:y="70" entity="ent4">
+      <OKLink id="mov1#mpkg2#opm1#dlu1#oln4" name="OKFlow8" to="mov1#mpkg2#opm1#rfrr1" automaticCoupling="true"/>
+      <Selector id="mov1#mpkg2#opm1#dlu1#su1" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#mpkg2#opm1#dlu1#su1#acond1" name="AttCondition1" predicate="neq" booleanOperator="or" implied="true" value="-1" attributes="ent4#att4"/>
+      </Selector>
+    </DeleteUnit>
+  </OperationUnits>
+</OperationModule>
