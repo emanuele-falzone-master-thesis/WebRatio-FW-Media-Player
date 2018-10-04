@@ -36,4 +36,8 @@
     <Attribute id="ent4#att6" name="Title" type="string"/>
     <Attribute id="ent4#att9" name="sound" type="string"/>
   </Entity>
+  <Entity gr:x="655" gr:y="315" id="ent1" name="Author" duration="volatile" attributeOrder="ent1#att1 ent1#att2" volatileStorage="database" volatileScope="application">
+    <Attribute id="ent1#att1" key="true" name="oid" type="integer"/>
+    <Attribute id="ent1#att2" name="Name" type="string"/>
+  </Entity>
 </DataModel>

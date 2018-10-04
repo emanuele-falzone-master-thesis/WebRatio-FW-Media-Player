@@ -25,17 +25,20 @@
         <LinkParameter id="sv1#page2#gctu1#ln7#par35" name="false_playing" sourceValue="false" targetVariable="sv1#page2#var2"/>
       </Link>
     </NoOpContentUnit>
+    <IndexUnit gr:x="125" gr:y="5" id="sv1#page2#inu2" name="Authors" entity="ent1" displayAttributes="ent1#att2" linkOrder="sv1#page2#inu2#ln1">
+      <Link id="sv1#page2#inu2#ln1" name="Flow1" to="sv1#page2#inu1" type="normal" validate="true">
+        <LinkParameter id="sv1#page2#inu2#ln1#par1" name="Name_AttCondition3" source="data[].ent1#att2" target="sv1#page2#inu1#su6#acond3"/>
+      </Link>
+    </IndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid" layout:style="BootstrapStyle">
     <layout:Row>
       <layout:Cell colspan="8" rowspan="2">
-        <layout:Unit unitId="sv1#page2#inu1" layout:frameLayout="BootstrapStyle/Default" layout:style="BootstrapStyle">
-          <layout:Link link="sv1#page2#inu1#ln5"/>
-          <layout:Attribute attribute="ent4#att5"/>
-          <layout:Attribute attribute="ent4#att6"/>
+        <layout:Unit unitId="sv1#page2#inu2" layout:frameLayout="BootstrapStyle/Default">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Link link="sv1#page2#inu2#ln1"/>
           <layout:LayoutParameter name="use-alternate" value="false" type="unit"/>
           <layout:LayoutParameter name="link-position" value="on_row" type="unit"/>
-          <layout:LayoutParameter name="show-title" value="true" type="frame"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -77,7 +80,16 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="8">
+        <layout:Unit unitId="sv1#page2#inu1" layout:frameLayout="BootstrapStyle/Default" layout:style="BootstrapStyle">
+          <layout:Link link="sv1#page2#inu1#ln5"/>
+          <layout:Attribute attribute="ent4#att5"/>
+          <layout:Attribute attribute="ent4#att6"/>
+          <layout:LayoutParameter name="use-alternate" value="false" type="unit"/>
+          <layout:LayoutParameter name="link-position" value="on_row" type="unit"/>
+          <layout:LayoutParameter name="show-title" value="true" type="frame"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -85,7 +97,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="4"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

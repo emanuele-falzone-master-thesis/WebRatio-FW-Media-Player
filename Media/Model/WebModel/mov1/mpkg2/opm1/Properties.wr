@@ -20,7 +20,7 @@
       </OKLink>
     </RestfulRequestResponseUnit>
     <CreateUnit id="mov1#mpkg2#opm1#cru1" name="Create Songs" gr:x="760" gr:y="85" bulk="true" entity="ent4">
-      <OKLink id="mov1#mpkg2#opm1#cru1#oln3" name="OKFlow3" to="mov1#mpkg2#opm1#okcu1" automaticCoupling="true"/>
+      <OKLink id="mov1#mpkg2#opm1#cru1#oln3" name="OKFlow3" to="mov1#mpkg2#opm1#dlu2" automaticCoupling="true"/>
     </CreateUnit>
     <OKCollectorUnit id="mov1#mpkg2#opm1#okcu1" name="OK Port1" gr:x="905" gr:y="95"/>
     <DeleteUnit id="mov1#mpkg2#opm1#dlu1" name="Delete Songs" gr:x="350" gr:y="70" entity="ent4">
@@ -29,5 +29,22 @@
         <AttributesCondition id="mov1#mpkg2#opm1#dlu1#su1#acond1" name="AttCondition1" predicate="neq" booleanOperator="or" implied="true" value="-1" attributes="ent4#att4"/>
       </Selector>
     </DeleteUnit>
+    <CreateUnit id="mov1#mpkg2#opm1#cru2" name="Create Authors" gr:x="780" gr:y="225" bulk="true" entity="ent1">
+      <OKLink id="mov1#mpkg2#opm1#cru2#oln7" name="OKFlow7" to="mov1#mpkg2#opm1#okcu1" automaticCoupling="true"/>
+    </CreateUnit>
+    <DeleteUnit id="mov1#mpkg2#opm1#dlu2" name="Delete Authors" gr:x="335" gr:y="215" entity="ent1">
+      <OKLink id="mov1#mpkg2#opm1#dlu2#oln5" name="OKFlow8" to="mov1#mpkg2#opm1#rfrr2" automaticCoupling="true"/>
+      <Selector id="mov1#mpkg2#opm1#dlu2#su2" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#mpkg2#opm1#dlu2#su2#acond2" name="AttCondition1" predicate="neq" booleanOperator="or" implied="true" value="-1" attributes="ent1#att1"/>
+      </Selector>
+    </DeleteUnit>
+    <RestfulRequestResponseUnit id="mov1#mpkg2#opm1#rfrr2" name="Restful Request Response" gr:x="525" gr:y="220" requestMethod="GET" requestContentType="JSON" responseContentType="JSON" compressRequest="false" endpointURL="http://emanuele.falzone.gitlab.io/almostjs-demo-game-data/authors.json">
+      <ResponseBodyParameter id="mov1#mpkg2#opm1#rfrr2#rrsp2" name="ResponseBodyParameter" minCard="1" maxCard="1">
+        <SimpleParameterFragment id="mov1#mpkg2#opm1#rfrr2#rrsp2#spf7" name="name" minCard="1" maxCard="1"/>
+      </ResponseBodyParameter>
+      <OKLink id="mov1#mpkg2#opm1#rfrr2#oln6" name="OKFlow1" to="mov1#mpkg2#opm1#cru2">
+        <LinkParameter id="mov1#mpkg2#opm1#rfrr2#oln6#par3" name="ResponseBodyParameter - ResponseBodyParameter/name_Name" source="ResponseBodyParameter$name" target="mov1#mpkg2#opm1#cru2.ent1#att2"/>
+      </OKLink>
+    </RestfulRequestResponseUnit>
   </OperationUnits>
 </OperationModule>
