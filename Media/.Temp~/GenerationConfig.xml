@@ -6,14 +6,14 @@
     <Property name="applicationServer">Tomcat</Property>
     <Property name="cloudDeploy">false</Property>
     <Property name="commonsLibDir">/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.commons.libs_7.2.16.201709280414/lib</Property>
-    <Property name="dbConfigPath">/var/folders/tx/w1yh42kn1ns0kr3vr8lkvyd40000gn/T/WRDBConfig6549148625965210008.xml</Property>
+    <Property name="dbConfigPath">/var/folders/tx/w1yh42kn1ns0kr3vr8lkvyd40000gn/T/WRDBConfig8924072550406746156.xml</Property>
     <Property name="defaultEncoding"></Property>
     <Property name="deployCorePluginDir">/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/configuration/org.eclipse.osgi/bundles/49/1/.cp</Property>
     <Property name="derbySystemHome">/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/WebRatio.app/Contents/MacOS/workspace/.metadata/.plugins/com.webratio.commons.db/derby</Property>
     <Property name="enterpriseProjectDir"></Property>
-    <Property name="eventSocketPort">63548</Property>
+    <Property name="eventSocketPort">64494</Property>
     <Property name="excludedProjects" type="list"></Property>
-    <Property name="generationTime">201810041142</Property>
+    <Property name="generationTime">201810041148</Property>
     <Property name="helpersPluginDir">/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.generator.helpers_7.2.16.201709280414</Property>
     <Property name="i18nBundleKeysFile" type="file"></Property>
     <Property name="i18nExtraBundleFile" type="file"></Property>
@@ -24,7 +24,7 @@
     <Property name="phases">All</Property>
     <Property name="projectDir">/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/WebRatio.app/Contents/MacOS/workspace/Media</Property>
     <Property name="projectName">Media</Property>
-    <Property name="projectPath">/var/folders/tx/w1yh42kn1ns0kr3vr8lkvyd40000gn/T/Project2936295203024226450.wr</Property>
+    <Property name="projectPath">/var/folders/tx/w1yh42kn1ns0kr3vr8lkvyd40000gn/T/Project4536750322563385125.wr</Property>
     <Property name="projectType">WEBPROJECT</Property>
     <Property name="rootModuleName"></Property>
     <Property name="uiPluginDir">/Users/emanuelefalzone/WebRatio_Enterprise_Platform_7.2.16/WebRatio/plugins/com.webratio.ide.ui_7.2.16.201709280414</Property>

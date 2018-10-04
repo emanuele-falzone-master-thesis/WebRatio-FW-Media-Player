@@ -16,7 +16,7 @@
         <LinkParameter id="mov1#mpkg2#opm1#rfrr1#oln2#par25" name="ResponseBodyParameter - ResponseBodyParameter/author_name_Author" source="ResponseBodyParameter$author_name" target="mov1#mpkg2#opm1#cru1.ent4#att5"/>
         <LinkParameter id="mov1#mpkg2#opm1#rfrr1#oln2#par26" name="ResponseBodyParameter - ResponseBodyParameter/sound_sound" source="ResponseBodyParameter$sound" target="mov1#mpkg2#opm1#cru1.ent4#att9"/>
         <LinkParameter id="mov1#mpkg2#opm1#rfrr1#oln2#par27" name="ResponseBodyParameter - ResponseBodyParameter/title_Title" source="ResponseBodyParameter$title" target="mov1#mpkg2#opm1#cru1.ent4#att6"/>
-        <LinkParameter id="mov1#mpkg2#opm1#rfrr1#oln2#par7" name="ResponseBodyParameter - ResponseBodyParameter/image_image" source="ResponseBodyParameter$image" target="mov1#mpkg2#opm1#cru1.ent4#att3"/>
+        <LinkParameter id="mov1#mpkg2#opm1#rfrr1#oln2#par4" name="ResponseBodyParameter - ResponseBodyParameter/image_image" source="ResponseBodyParameter$image" target="mov1#mpkg2#opm1#cru1.ent4#att7"/>
       </OKLink>
     </RestfulRequestResponseUnit>
     <CreateUnit id="mov1#mpkg2#opm1#cru1" name="Create Songs" gr:x="760" gr:y="85" bulk="true" entity="ent4">

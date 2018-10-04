@@ -12,7 +12,7 @@
       </Selector>
       <SortAttribute attribute="ent4#att4" order="ascending"/>
     </IndexUnit>
-    <DataUnit gr:x="5" gr:y="140" id="sv1#page2#dau1" name="Song" entity="ent4" displayAttributes="ent4#att6">
+    <DataUnit gr:x="5" gr:y="140" id="sv1#page2#dau1" name="Song" entity="ent4" displayAttributes="ent4#att6 ent4#att7">
       <Selector id="sv1#page2#dau1#su4" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#page2#dau1#su4#kcond2" name="OidFilter" predicate="in" implied="false"/>
       </Selector>
@@ -51,6 +51,7 @@
       <layout:Cell colspan="4">
         <layout:Unit unitId="sv1#page2#dau1" label="Now Playing" layout:frameLayout="BootstrapStyle/Default" layout:style="BootstrapStyle">
           <layout:Attribute attribute="ent4#att6"/>
+          <layout:Attribute attribute="ent4#att7"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

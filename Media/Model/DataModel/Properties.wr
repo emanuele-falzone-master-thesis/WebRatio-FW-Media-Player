@@ -30,11 +30,12 @@
     <RelationshipRole1 id="Group2Module" name="modules" maxCard="N"/>
     <RelationshipRole2 id="Module2Group" name="groups" maxCard="N"/>
   </Relationship>
-  <Entity id="ent4" name="Song" duration="volatile" volatileScope="application" attributeOrder="ent4#att4 ent4#att5 ent4#att6 ent4#att9" volatileStorage="database" gr:x="460" gr:y="300">
+  <Entity id="ent4" name="Song" duration="volatile" volatileScope="application" attributeOrder="ent4#att4 ent4#att5 ent4#att6 ent4#att9 ent4#att7" volatileStorage="database" gr:x="460" gr:y="300">
     <Attribute id="ent4#att4" name="oid" key="true" type="integer"/>
     <Attribute id="ent4#att5" name="Author" type="string"/>
     <Attribute id="ent4#att6" name="Title" type="string"/>
     <Attribute id="ent4#att9" name="sound" type="string"/>
+    <Attribute id="ent4#att7" name="image" type="string"/>
   </Entity>
   <Entity gr:x="655" gr:y="315" id="ent1" name="Author" duration="volatile" attributeOrder="ent1#att1 ent1#att2" volatileStorage="database" volatileScope="application">
     <Attribute id="ent1#att1" key="true" name="oid" type="integer"/>
